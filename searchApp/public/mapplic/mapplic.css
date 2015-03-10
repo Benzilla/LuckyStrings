@@ -44,14 +44,27 @@
 	opacity: 0;
 }
 
-/* Main elements */
+/* Main elements MOBILE*/
+#mapplic-containerDESKTOP{
+	
+	position: relative;
+	width: 70%;
+	height: 100%;
+}
+
+#mapplic-containerMOBILE{
+	
+	position: absolute;
+	width: 70%;
+	height: 100%;
+}
+
+/* Main elements WEB*/
 .mapplic-container {
 	background-color: #f8f8f8;
 	display: inline-block;
 	overflow: hidden;
-	position: relative;
-	width: 70%;
-	height: 100%;
+
 }
 
 :-webkit-full-screen .mapplic-container {
@@ -62,6 +75,9 @@
 	position: absolute;
 	left: 0;
 	top: 0;
+
+	/* ADDED */
+	z-index: 0;
 }
 
 /* Map layer */
