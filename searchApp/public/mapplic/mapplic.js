@@ -415,7 +415,7 @@
 			this.init = function() {
 				var s = this;
 
-				this.el = $('<div></div>').addClass('mapplic-sidebar').appendTo(self.el);
+				this.el = $('<div></div>').addClass('mapplic-sidebar').addClass('sidebar-wrapper').appendTo(self.el);
 
 				if (self.o.search) {
 					var form = $('<form></form>').attr({'id':'target'}).addClass('mapplic-search-form').submit(function(e) {
