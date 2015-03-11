@@ -415,7 +415,7 @@
 			this.init = function() {
 				var s = this;
 
-				this.el = $('<div></div>').addClass('mapplic-sidebar').attr({'id':'sidebar-wrapper'}).appendTo(self.el);
+				this.el = $('<div></div>').addClass('mapplic-sidebar').attr('id','sidebar-wrapper').appendTo(self.el);
 
 				if (self.o.search) {
 					var form = $('<form></form>').attr({'id':'target'}).addClass('mapplic-search-form').submit(function(e) {
@@ -675,8 +675,8 @@
 			var nrlevels = 0;
 			var shownLevel;
 
+			self.container = $('<div></div>').addClass('mapplic-container').attr('id','mapplic-containerMOBILE').appendTo(self.el);
 
-			self.container = $('<div></div>').addClass('mapplic-container').attr('id','mapplic-containerDESKTOP').appendTo(self.el);
 			self.map = $('<div></div>').addClass('mapplic-map').appendTo(self.container);
 			if (self.o.zoom) self.map.addClass('mapplic-zoomable');
 
@@ -885,7 +885,10 @@
 				if ($(window).width() < 668) {
 					self.container.height($(window).height() - 66);
 				}
-				else self.container.height('100%');
+				else
+				{
+					self.container.height('100%');
+				}
 
 				var wr = self.container.width() / self.contentWidth,
 					hr = self.container.height() / self.contentHeight;
