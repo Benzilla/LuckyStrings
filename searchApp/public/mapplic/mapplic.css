@@ -317,7 +317,24 @@ a.mapplic-zoomout-button {
 	height: 28px;
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: 85%;
+}
+
+/*own toggle button*/
+.toggle-button {
+    background-color: #fff;
+    background-image: url(images/fullscreen.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid #eee;
+    border-bottom: 1px solid #ddd;
+    border-radius: 2px;
+    margin: 10px;
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 /* Levels */
@@ -384,6 +401,7 @@ a.mapplic-zoomout-button {
 	background-color: #f8f8f8;
 	width: 30%;
 	height: 100%;
+	top:40px;
 	float: left;
 	position: relative;
 }

@@ -637,6 +637,12 @@
 					else s.goFull();
 
 				}).appendTo(self.container);
+
+				$('<a></a>').attr('href', '#').attr('href', '#').addClass('toggle-button').click(function(e) {
+					        e.preventDefault();
+					        $("#wrapper").toggleClass("toggled");
+					        $(".mapplic-search-form").toggle();
+				}).appendTo(self.container);
 			}
 
 			this.goFull = function() {
