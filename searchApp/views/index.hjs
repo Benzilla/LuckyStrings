@@ -59,6 +59,7 @@
 
   <div>
 
+
  <div id="wrapper"> 
 <!--    <div class="container" >  -->
       <!-- Page Content -->
@@ -76,11 +77,12 @@
 <!--    </div>  -->
   </div> 
 
-    <div class="navbar navbar-default" id="bottombar" style="margin-top:10px">
+
+<!--     <div class="navbar navbar-default" id="bottombar" style="margin-top:10px">
       <div class="container">
         <p class ="navbar-text">This site was built by Computer Science students from the University of Bristol <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a></p>
       </div>
-    </div>
+    </div> -->
   </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

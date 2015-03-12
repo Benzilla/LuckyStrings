@@ -893,7 +893,7 @@
 				}
 				else
 				{
-					self.container.height('100%');
+					//self.container.height('100%');
 				}
 
 				var wr = self.container.width() / self.contentWidth,
