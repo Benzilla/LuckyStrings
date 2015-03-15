@@ -44,22 +44,43 @@
 	opacity: 0;
 }
 
-/* Main elements MOBILE*/
-#mapplic-containerDESKTOP{
+@media(max-width:600px) {
+
+#mapplic-containerMOBILE{
 	
-	position: relative;
-	width: 100%;
+	position: absolute;
 	height: 100%;
+ 	width: 100%;
+	background-color: #f8f8f8;
+	display: inline-block;
+	overflow: hidden;
+	-webkit-filter: blur(3px);
+    filter: blur(3px);	
+	
+	}
 }
 
 #mapplic-containerMOBILE{
 	
 	position: absolute;
-	height: 90%;
+	height: 100%;
  	width: 100%;
 	background-color: #f8f8f8;
 	display: inline-block;
 	overflow: hidden;
+}
+
+#mapplic-containerMOBILE.toggled{
+
+	position: absolute;
+	height: 100%;
+ 	width: 100%;
+	background-color: #f8f8f8;
+	display: inline-block;
+	overflow: hidden;
+	-webkit-filter: blur(0px);
+    filter: blur(0px);	
+
 }
 
 /* Main elements WEB*/
@@ -73,14 +94,18 @@
 	width: 80%;
 }
 
+
+/* for ZOOM */
 .mapplic-map {
 	position: absolute;
 	left: 0;
 	top: 0;
 
-	/* ADDED */
-	z-index: 0;
+
 }
+
+/*     -webkit-filter: blur(5px);
+        filter: blur(5px);*/
 
 /* Map layer */
 .mapplic-layer {
@@ -107,6 +132,12 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
+}
+
+.mapplic-map-image.toggle {
+
+	-webkit-filter: blur(5px);
+    filter: blur(5px);
 }
 
 .mapplic-map.mapplic-zoomable.mapplic-dragging .mapplic-map-image {
@@ -722,7 +753,8 @@ a.mapplic-zoomout-button {
 @media all and (max-width: 668px) {
 	.mapplic-container,
 	.mapplic-sidebar {
-		width: 70%;
+		width: 80%;
+
 	}
 
 	.mapplic-tooltip {
@@ -734,7 +766,7 @@ a.mapplic-zoomout-button {
 	}
 
 	.mapplic-element {
-		height: auto !important;
+		/*height: auto !important;*/
 	}
 
 	.mapplic-fullscreen-button {

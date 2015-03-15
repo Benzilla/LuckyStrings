@@ -480,8 +480,15 @@
 					e.preventDefault();
 					showLocation(data.id, 600);
 
+
+
 					// Scroll back to map on mobile
 					if ($(window).width() < 668) {
+
+						$("#wrapper").toggleClass("toggled");
+					    $(".mapplic-search-form").toggle();
+					    $("#mapplic-containerMOBILE").toggleClass("toggled");
+
 						$('html, body').animate({
 							scrollTop: self.container.offset().top
 						}, 400);
@@ -642,6 +649,8 @@
 					        e.preventDefault();
 					        $("#wrapper").toggleClass("toggled");
 					        $(".mapplic-search-form").toggle();
+					        $("#mapplic-containerMOBILE").toggleClass("toggled");
+				
 				}).appendTo(self.container);
 			}
 
@@ -888,12 +897,20 @@
 			// Browser resize
 			$(window).resize(function() {				
 				// Mobile
-				if ($(window).width() < 668) {
+				if ($(window).width() < 0) {
 					self.container.height($(window).height() - 66);
 				}
 				else
 				{
 					//self.container.height('100%');
+				}
+
+				if ($(window).width() < 600) {
+
+						$("#wrapper").toggleClass("toggled");
+					    $(".mapplic-search-form").toggle();
+					    $("#mapplic-containerMOBILE").toggleClass("toggled");
+					
 				}
 
 				var wr = self.container.width() / self.contentWidth,

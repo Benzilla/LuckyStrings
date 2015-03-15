@@ -57,7 +57,7 @@
         </div>
     </div>
 
-  <div>
+
 
 
  <div id="wrapper"> 
@@ -72,7 +72,9 @@
               </div>
           </div>
       </div> -->
+    <div id="center_contain">
       <div id="mapplic"></div>
+    </div>
       <!-- /#page-content-wrapper -->
 <!--    </div>  -->
   </div> 
@@ -83,7 +85,7 @@
         <p class ="navbar-text">This site was built by Computer Science students from the University of Bristol <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a></p>
       </div>
     </div> -->
-  </div>
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -114,8 +116,9 @@
 
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-        $(".mapplic-search-form").toggle();
+        //$("#wrapper").toggleClass("toggled");
+        //$(".mapplic-search-form").toggle();
+        //$("#mapplic-containerMOBILE").toggleClass("toggled");
     });
     </script>
   </body>
