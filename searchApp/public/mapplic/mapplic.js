@@ -480,8 +480,6 @@
 					e.preventDefault();
 					showLocation(data.id, 600);
 
-
-
 					// Scroll back to map on mobile
 					if ($(window).width() < 668) {
 
@@ -651,7 +649,7 @@
 					        $(".mapplic-search-form").toggle();
 					        $("#mapplic-containerMOBILE").toggleClass("toggled");
 				
-				}).appendTo(self.container);
+				}).appendTo(self.el);
 			}
 
 			this.goFull = function() {
