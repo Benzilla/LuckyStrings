@@ -4,6 +4,29 @@
 	"categories":[
 	],
 	"levels": [
+
+		{
+			"id": "base",
+			"name": "First Floor",
+			"title": "First Floor",
+			"map": "img/floor1.svg",
+			"minimap": "img/floor1mini.jpg",
+			"locations": [
+
+			{
+					"id": "Cafe",
+					"title": "Cafe",
+					"about": "The best place to spend the afternoon",
+					"pin": "hidden",
+					"description": "<p>This is an awesome coffee table.<p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean viverra laoreet imperdiet. Praesent viverra, enim at malesuada dignissim, ante purus vestibulum turpis, nec molestie ipsum mauris non risus. In hac habitasse platea dictumst. Integer porta dignissim magna, at sollicitudin neque aliquam eget. Pellentesque dapibus, augue eu ornare mattis, est mauris volutpat ligula, ac ornare turpis turpis sit amet elit.</p>",
+					"x": "0.5975",
+					"y": "0.1717",
+					"zoom": "3"
+				},
+
+			]
+
+		},
 		{
 			"id": "base",
 			"name": "First Floor",
