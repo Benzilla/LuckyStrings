@@ -360,6 +360,13 @@ a.mapplic-zoomout-button {
 	bottom: 200px;
 }
 
+@media(max-width:600px) {
+
+	.mapplic-accessibility-buttons {
+		margin: -10px;
+	}
+}
+
 .mapplic-accessibility-buttons a {
 	background-color: #fff;
 	background-repeat: no-repeat;
