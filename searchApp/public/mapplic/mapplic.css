@@ -353,6 +353,64 @@ a.mapplic-zoomout-button {
 	left: 85%;
 }
 
+.mapplic-accessibility-buttons {
+	margin: 10px;
+	position: absolute;
+	right: 0;
+	bottom: 200px;
+}
+
+.mapplic-accessibility-buttons a {
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-position: center;
+	border: 1px solid #eee;
+	border-bottom: 1px solid #ddd;
+	color: #fff !important;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+	text-align: center;
+	line-height: 24px;
+	width: 40px;
+	height: 40px;
+}
+
+.mapplic-accessibility-buttons a:active {
+	background-color: #f4f4f4;
+}
+
+.mapplic-accessibility-buttons a.mapplic-disabled {
+	background-color: #eee;
+	cursor: default;
+}
+
+a.mapplic-toilet-button {
+	background-image: url(images/Toilet.png);
+	background-size: 30px 30px;
+	border-radius: 3px 3px 0 0;
+	box-shadow: 2px 2px 3px #888888;
+	margin: 10px;
+}
+
+a.mapplic-information-button {
+	background-image: url(images/info.png);
+	background-size: 30px 30px;
+	border-radius: 0 0 3px 3px;
+	margin: 10px;
+	box-shadow: 2px 2px 3px #888888;
+	border-top: none;
+}
+a.mapplic-lifts-button {
+	background-image: url(images/lifts.png);
+	background-size: 30px 30px;
+	border-radius: 0 0 3px 3px;
+	margin: 10px;
+	box-shadow: 2px 2px 3px #888888;
+	border-top: none;
+}
+
 /*own toggle button*/
 .toggle-button {
     background-color: #fff;

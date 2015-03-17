@@ -26,6 +26,7 @@
 			search: true,
 			clearbutton: true,
 			zoombuttons: true,
+			accessibilitybuttons: true,
 			hovertip: true,
 			fullscreen: false,
 			developer: false,
@@ -583,6 +584,18 @@
 			}
 		}
 
+		function AccessibilityButtons() {
+			this.el = null;
+
+			this.init = function() {
+				this.el = $('<div></div>').addClass('mapplic-accessibility-buttons').appendTo(self.container);
+
+				this.toilet = $('<a></ha>').attr('href', '#').addClass('mapplic-toilet-button').appendTo(this.el);
+				this.information = $('<a></ha>').attr('href', '#').addClass('mapplic-information-button').appendTo(this.el);
+				this.lifts = $('<a></ha>').attr('href', '#').addClass('mapplic-lifts-button').appendTo(this.el);
+			}
+		}
+
 		// Zoom Buttons
 		function ZoomButtons() {
 			this.el = null;
@@ -862,6 +875,10 @@
 				self.zoombuttons = new ZoomButtons();
 				self.zoombuttons.init();
 				if (!self.o.clearbutton) self.zoombuttons.el.css('bottom', '0');
+			}
+
+			if (self.o.zoombuttons) {
+				self.accessibilitybuttons = new AccessibilityButtons().init();
 			}
 
 			// Fullscreen
