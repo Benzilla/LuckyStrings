@@ -339,15 +339,15 @@ a.mapplic-zoomout-button {
 /* Fullscreen Button */
 .mapplic-fullscreen-button {
 	background-color: #fff;
-	background-image: url(images/fullscreen.png);
+	background-image: url(images/fullscreenText.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	border: 1px solid #eee;
 	border-bottom: 1px solid #ddd;
 	border-radius: 2px;
 	margin: 10px;
-	width: 28px;
-	height: 28px;
+	width: 75px;
+	height: 30px;
 	position: absolute;
 	top: 0;
 	left: 85%;

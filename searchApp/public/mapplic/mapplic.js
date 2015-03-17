@@ -593,6 +593,26 @@
 				this.toilet = $('<a></ha>').attr('href', '#').addClass('mapplic-toilet-button').appendTo(this.el);
 				this.information = $('<a></ha>').attr('href', '#').addClass('mapplic-information-button').appendTo(this.el);
 				this.lifts = $('<a></ha>').attr('href', '#').addClass('mapplic-lifts-button').appendTo(this.el);
+
+				this.toilet.on('click', function(e) {
+					e.preventDefault();
+					var route = "/accessibility";
+					var url = route +"?search="+ "toilet";
+					LSajaxReq(url);
+				});
+				this.information.on('click', function(e) {
+					e.preventDefault();
+					var route = "/accessibility";
+					var url = route +"?search="+ "information";
+					LSajaxReq(url);
+				});
+				this.lifts.on('click', function(e) {
+					e.preventDefault();
+					var route = "/accessibility";
+					var url = route +"?search="+ "lifts";
+					LSajaxReq(url);
+				});
+
 			}
 		}
 
