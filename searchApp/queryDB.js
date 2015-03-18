@@ -8,9 +8,18 @@ var newquery =
 "FROM "+
 "OBJECTS o "+
 "INNER JOIN DISPLAY d ON d.id = o.display_id "+
-"where simple_name LIKE ? "+
-"ORDER BY "+
-"d.l2";
+"where"+
+"(simple_name LIKE ? "+
+"or description LIKE ? "+
+"or collection LIKE ? )";
+// "ORDER BY "+
+// "d.l2";
+
+var opt = "AND (" +
+"simple_name LIKE ? "+
+"or description LIKE ? "+
+"or collection LIKE ? )"+
+")";
 
 var roomLocations = new Array();
 roomLocations["Glass Gallery"] = new Array(0.5263,0.4650,2);
@@ -122,26 +131,31 @@ function populateJson(rows){
         rows[idx].about = "";
         delete rows[idx].l2;
         mapplic.levels[itemLocation[2]].locations.push(rows[idx]);
-        console.log(rows[idx]);
+        //console.log(rows[idx]);
       }
     }
   }
   return mapplic;
 }
 
+var mysql = require('mysql');
 
 var queryDB = function (msg, conn, callback)
 {
+  var localquery='%'+msg+'%';
 
-	var localquery='%'+msg+'%';
-  console.log("Query: "+localquery);
-	conn.query( newquery,localquery, function(err, rows, fields) {
+  // exact name or substring in description
+  var inserts = [msg, localquery, localquery];
+  localquery = mysql.format(newquery, inserts);
 
-	    if (err) callback(null,err);
+  //console.log("Query: "+localquery);
+  conn.query( localquery, function(err, rows, fields) {
+
+      if (err) callback(null,err);
       var mapplicdata = populateJson(rows);
-	    callback(mapplicdata,null);
+      callback(mapplicdata,null);
 
-	});
+  });
 
 }
 
