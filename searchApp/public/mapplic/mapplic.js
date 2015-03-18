@@ -687,6 +687,7 @@
 					        $(".mapplic-search-form").toggle();
 					        $("#mapplic-containerMOBILE").toggleClass("toggled");
 					        $(".mapplic-accessibility-buttons").toggleClass("toggled");
+					        $(this).toggleClass("toggle-button-out");
 
 				}).appendTo(self.el);
 			}
@@ -912,9 +913,9 @@
 
 
 			//**~ HIDES SIDE MENU ON START ~**
-			$("#wrapper").toggleClass("toggled");
-	        $(".mapplic-search-form").toggle();
-	        $("#mapplic-containerMOBILE").toggleClass("toggled");
+			// $("#wrapper").toggleClass("toggled");
+	  //       $(".mapplic-search-form").toggle();
+	  //       $("#mapplic-containerMOBILE").toggleClass("toggled");
 
 			// Levels
 			if (nrlevels > 1) {

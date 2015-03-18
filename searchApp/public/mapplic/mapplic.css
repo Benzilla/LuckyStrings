@@ -1,4 +1,4 @@
-ma/* Mapplic 3.0 */
+/* Mapplic 3.0 */
 
 .mapplic-element a {
 	color: #333;
@@ -339,15 +339,15 @@ a.mapplic-zoomout-button {
 /* Fullscreen Button */
 .mapplic-fullscreen-button {
 	background-color: #fff;
-	background-image: url(images/fullscreenText.png);
+	background-image: url(images/fullscreen.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	border: 1px solid #eee;
 	border-bottom: 1px solid #ddd;
 	border-radius: 2px;
 	margin: 10px;
-	width: 75px;
-	height: 30px;
+	width: 28px;
+	height: 28px;
 	position: absolute;
 	top: 0;
 	left: 85%;
@@ -425,18 +425,34 @@ a.mapplic-lifts-button {
 /*own toggle button*/
 .toggle-button {
     background-color: #fff;
-    background-image: url(images/fullscreen.png);
+    background-image: url(images/backArrowSm.png);
     background-repeat: no-repeat;
     background-position: center;
     border: 1px solid #eee;
     border-bottom: 1px solid #ddd;
     border-radius: 2px;
     margin: 10px;
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.toggle-button-out {
+	background-color: #fff;
+    background-image: url(images/forwardArrowSm.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid #eee;
+    border-bottom: 1px solid #ddd;
+    border-radius: 2px;
+    margin: 10px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: 
 }
 
 /* Levels */
