@@ -487,6 +487,7 @@
 						$("#wrapper").toggleClass("toggled");
 					    $(".mapplic-search-form").toggle();
 					    $("#mapplic-containerMOBILE").toggleClass("toggled");
+					    $(".mapplic-accessibility-buttons").toggleClass("toggled");
 
 						$('html, body').animate({
 							scrollTop: self.container.offset().top
@@ -588,11 +589,12 @@
 			this.el = null;
 
 			this.init = function() {
-				this.el = $('<div></div>').addClass('mapplic-accessibility-buttons').appendTo(self.container);
+				
+				this.el = $('<div></div>').addClass('mapplic-accessibility-buttons').appendTo(self.el);
 
-				this.toilet = $('<a></ha>').attr('href', '#').addClass('mapplic-toilet-button').appendTo(this.el);
-				this.information = $('<a></ha>').attr('href', '#').addClass('mapplic-information-button').appendTo(this.el);
-				this.lifts = $('<a></ha>').attr('href', '#').addClass('mapplic-lifts-button').appendTo(this.el);
+				this.toilet = $('<a></a>').addClass('mapplic-toilet-button').appendTo(this.el);
+				this.information = $('<a></a>').addClass('mapplic-information-button').appendTo(this.el);
+				this.lifts = $('<a></a>').addClass('mapplic-lifts-button').appendTo(this.el);
 
 				this.toilet.on('click', function(e) {
 					e.preventDefault();
@@ -600,12 +602,14 @@
 					var url = route +"?search="+ "toilet";
 					LSajaxReq(url);
 				});
+
 				this.information.on('click', function(e) {
 					e.preventDefault();
 					var route = "/accessibility";
 					var url = route +"?search="+ "information";
 					LSajaxReq(url);
 				});
+
 				this.lifts.on('click', function(e) {
 					e.preventDefault();
 					var route = "/accessibility";
@@ -681,6 +685,7 @@
 					        $("#wrapper").toggleClass("toggled");
 					        $(".mapplic-search-form").toggle();
 					        $("#mapplic-containerMOBILE").toggleClass("toggled");
+					        $(".mapplic-accessibility-buttons").toggleClass("toggled");
 				
 				}).appendTo(self.el);
 			}
@@ -941,11 +946,12 @@
 				}
 
 				if ($(window).width() < 600) {
-
+						
 						$("#wrapper").toggleClass("toggled");
 					    $(".mapplic-search-form").toggle();
 					    $("#mapplic-containerMOBILE").toggleClass("toggled");
-					
+					    $(".mapplic-accessibility-buttons").toggleClass("toggled");
+
 				}
 
 				var wr = self.container.width() / self.contentWidth,

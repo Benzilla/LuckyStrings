@@ -353,6 +353,10 @@ a.mapplic-zoomout-button {
 	left: 85%;
 }
 
+.mapplic-accessibility-buttons.toggled {
+	opacity: 0;
+}
+
 .mapplic-accessibility-buttons {
 	margin: 10px;
 	position: absolute;

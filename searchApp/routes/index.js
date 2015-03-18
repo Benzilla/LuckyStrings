@@ -61,6 +61,7 @@ router.get('/accessibility', function(req, res) {
 
 	if(req.xhr)
 	{
+		
 		accessibilityLocation(urlObj.query.search,connection,function(data,err){			
 			//VALIDATE JSON
 			var string = JSON.stringify(data);
