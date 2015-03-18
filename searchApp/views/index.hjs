@@ -50,15 +50,12 @@
           <ul class ="nav navbar-nav navbar-left">
             <li><a id="logoimg" href="http://www.bristolmuseums.org.uk/bristol-museum-and-art-gallery/"><img src="img/museumlogo.jpg" class ="logo" data-toggle="popover" tabindex="50" data-placement="right"></a></li>
             <li class="active"><a href ="#">Home</a></li>
-            <li><a href ="#">Report an issue</a></li>
+            <li><a href ="https://www.surveymonkey.com/s/BNXC8PH" target="_blank">Feedback</a></li>
             <li><a href ="#">About</a></li>
         </ul>
          </div>
         </div>
     </div>
-
-
-
 
  <div id="wrapper"> 
 <!--    <div class="container" >  -->
