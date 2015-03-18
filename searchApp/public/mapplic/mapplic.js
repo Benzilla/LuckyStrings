@@ -911,12 +911,6 @@
 			// Fullscreen
 			if (self.o.fullscreen) self.fullscreen = new FullScreen().init();
 
-
-			//**~ HIDES SIDE MENU ON START ~**
-			// $("#wrapper").toggleClass("toggled");
-	  //       $(".mapplic-search-form").toggle();
-	  //       $("#mapplic-containerMOBILE").toggleClass("toggled");
-
 			// Levels
 			if (nrlevels > 1) {
 				self.levels = $('<div></div>').addClass('mapplic-levels');

@@ -13,15 +13,15 @@ var newquery =
 "d.l2";
 
 var roomLocations = new Array();
-roomLocations["toilet0"] = new Array(0.5263,0.4650,0);
-roomLocations["toilet1"] = new Array(0.3313,0.4100,0);
-roomLocations["toilet2"] = new Array(0.5425,0.1517,0);
-roomLocations["information0"] = new Array(0.5038,0.1850,0);
-roomLocations["lifts0"] = new Array(0.5175,0.3500,0);
-roomLocations["lifts1"]= new Array(0.6538,0.3917,1);
-roomLocations["lifts2"]= new Array(0.6425,0.6767,1);
-roomLocations["lifts3"] = new Array(0.4500,0.7817,2);
-roomLocations["lifts4"] = new Array(0.6925,0.3183,2);
+roomLocations["toilet0"] = new Array(0.5720,0.4800,0);
+roomLocations["toilet1"] = new Array(0.3975,0.4800,0);
+roomLocations["toilet2"] = new Array(0.5750,0.4300,0);
+roomLocations["information0"] = new Array(0.5715,0.6120,0);
+roomLocations["lifts0"] = new Array(0.7175,0.4600,0);
+roomLocations["lifts1"]= new Array(0.7188,0.4450,1);
+roomLocations["lifts2"]= new Array(0.7075,0.6089,1);
+roomLocations["lifts3"] = new Array(0.7388,0.5817,2);
+roomLocations["lifts4"] = new Array(0.7530,0.4277,2);
 
 
 var floor1Obj={"id":"1","name":"Ground Floor","title":"Ground Floor",
