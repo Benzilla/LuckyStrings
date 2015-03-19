@@ -143,8 +143,10 @@ var mysql = require('mysql');
 var queryDB = function (msg, conn, callback)
 {
 
-  if(msg==null)
+  if(!msg)
     msg="sdfsdfsdfsdfsdfsfd";
+
+  console.log(msg);
 
   var localquery='% '+msg+'%';
 
