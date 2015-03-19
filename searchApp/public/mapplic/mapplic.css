@@ -439,7 +439,7 @@ a.mapplic-lifts-button {
     left: 0;
 }
 
-.toggle-button-out {
+.toggle-button.toggled {
 	background-color: #fff;
     background-image: url(images/forwardArrowSm.png);
     background-repeat: no-repeat;
