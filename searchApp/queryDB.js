@@ -142,10 +142,10 @@ var mysql = require('mysql');
 
 var queryDB = function (msg, conn, callback)
 {
-  var localquery='%'+msg+'%';
+  var localquery='% '+msg+'%';
 
   // exact name or substring in description
-  var inserts = [msg, localquery, localquery];
+  var inserts = [localquery, localquery, localquery];
   localquery = mysql.format(newquery, inserts);
 
   //console.log("Query: "+localquery);
