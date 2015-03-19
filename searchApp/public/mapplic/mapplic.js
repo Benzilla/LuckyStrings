@@ -44,16 +44,15 @@
 		var LSajaxReq=function(url)
 		{
 			$.getJSON(url,function(data) {
+				if(data!=null)
+				{
+					clearData();
+					processData(data);
 
-					if(data!=null)
-					{
-						clearData();
-						processData(data);
-
-						self.el.removeClass('mapplic-loading');
-						if (self.o.zoom) addControls();
-					}
-				});
+					self.el.removeClass('mapplic-loading');
+					if (self.o.zoom) addControls();
+				}				
+			});
 		}
 
 		var LSprocessJson= function(data)
@@ -493,8 +492,7 @@
 
 						$("#wrapper").toggleClass("toggled");
 					    $(".mapplic-search-form").toggle();
-					 	$("#mapplic-containerMOBILE").toggleClass("toggled");
-						$(".mapplic-accessibility-buttons").toggleClass("toggled");
+						$(".mapplic-accessibility-buttons").toggle();
 						$(".toggle-button").toggleClass("toggled");
 
 						$('html, body').animate({
@@ -694,7 +692,6 @@
 					        $("#wrapper").toggleClass("toggled");
 					        $(".mapplic-search-form").toggle();
 					        $("#mapplic-containerMOBILE").toggleClass("toggled");
-					        $(".mapplic-accessibility-buttons").toggleClass("toggled");
 					        $(".toggle-button").toggleClass("toggled");
 					        $(".mapplic-accessibility-buttons").toggle();					        					        
 
@@ -982,8 +979,7 @@
 						//window.alert("ok");
 						$("#wrapper").toggleClass("toggled");
 						$(".mapplic-search-form").toggle();
-						$("#mapplic-containerMOBILE").toggleClass("toggled");
-						$(".mapplic-accessibility-buttons").toggleClass("toggled");
+						$(".mapplic-accessibility-buttons").toggle();
 						$(".toggle-button").toggleClass("toggled");
 						count=0;
 
