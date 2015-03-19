@@ -142,6 +142,10 @@ var mysql = require('mysql');
 
 var queryDB = function (msg, conn, callback)
 {
+
+  if(msg==null)
+    msg="sdfsdfsdfsdfsdfsfd";
+
   var localquery='% '+msg+'%';
 
   // exact name or substring in description
