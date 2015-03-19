@@ -20,7 +20,7 @@
 
   </head>
 
-  <body onload="mobilecheck()">
+  <body>
 
     <div class ="navbar navbar-inverse navbar-static-top">
       <div class="container">
