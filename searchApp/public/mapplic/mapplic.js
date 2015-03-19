@@ -696,6 +696,7 @@
 					        $("#mapplic-containerMOBILE").toggleClass("toggled");
 					        $(".mapplic-accessibility-buttons").toggleClass("toggled");
 					        $(".toggle-button").toggleClass("toggled");
+					        $(".mapplic-accessibility-buttons").toggle();					        					        
 
 				}).appendTo(self.el);
 			}
