@@ -3,18 +3,13 @@
  * http://www.mapplic.com
  */
 
+ //search PATCH to find the code of the PATCH
+
 (function($) {
-
-	if ($(window).width() < 600) {
-
-		window.alert("ok");
-
-		// $("#wrapper").toggleClass("toggled");
-		// $(".mapplic-search-form").toggle();
-		// $("#mapplic-containerMOBILE").toggleClass("toggled");
-		// $(".mapplic-accessibility-buttons").toggleClass("toggled");
-
-	}
+	
+	//PATCH
+	var count = 0;
+	//PATCH
 
 	function LScheckRequest (url)
 	{
@@ -59,8 +54,6 @@
 						if (self.o.zoom) addControls();
 					}
 				});
-
-
 		}
 
 		var LSprocessJson= function(data)
@@ -126,6 +119,8 @@
 
 				// Append
 				self.map.append(this.el);
+
+
 			}
 
 			this.set = function(location) {
@@ -949,6 +944,22 @@
 			}
 			level(shownLevel);
 
+			if ($(window).width() < 600) {
+
+				//PATCH
+				// this is the right palce to resize but
+				// due to the fact that deveices may change width on rotation
+				// we need a dynamic resize and this work only on refresh
+				// therefore the patch is still here 
+
+				// $("#wrapper").toggleClass("toggled");
+				// $(".mapplic-search-form").toggle();
+				// $("#mapplic-containerMOBILE").toggleClass("toggled");
+				// $(".mapplic-accessibility-buttons").toggleClass("toggled");
+				// $(".toggle-button").toggleClass("toggled");
+			}
+
+
 			// Browser resize
 			$(window).resize(function() {
 				// Mobile
@@ -961,6 +972,22 @@
 				}
 
 				if ($(window).width() < 600) {
+
+					//PATCH
+					count++;
+
+					if (count==1){
+
+						//window.alert("ok");
+						$("#wrapper").toggleClass("toggled");
+						$(".mapplic-search-form").toggle();
+						$("#mapplic-containerMOBILE").toggleClass("toggled");
+						$(".mapplic-accessibility-buttons").toggleClass("toggled");
+						$(".toggle-button").toggleClass("toggled");
+						count=0;
+
+					}
+					//PATCH
 
 				}
 
@@ -1305,7 +1332,6 @@
 			var me = $(this);
 			var	key = 'mapplic' + (len > 1 ? '-' + ++index : '');
 			var instance = (new Mapplic).init(me, params);
-
 		});
 	};
 })(jQuery);
