@@ -49,8 +49,7 @@
 				{
 					clearData();
 					processData(data);
-					console.log("Hello");
-					//$("#mapplic-containerMOBILE").toggleClass("toggled");
+					$("#mapplic-containerMOBILE").toggleClass("toggled");
 					self.el.removeClass('mapplic-loading');
 					if (self.o.zoom) addControls();
 				}				
@@ -59,7 +58,11 @@
 
 		var LSprocessJson= function(data)
 		{
-			processData(data);
+			processData(data);			
+			$("#wrapper").toggleClass("toggled");
+		    $(".mapplic-search-form").toggle();
+			$(".mapplic-accessibility-buttons").toggle();
+			$(".toggle-button").toggleClass("toggled");
 			self.el.removeClass('mapplic-loading');
 
 				// Controls
@@ -86,11 +89,6 @@
 
 			if(LScheckRequest(url))
 				LSajaxReq(url);
-				//$("#wrapper").toggleClass("toggled");
-				console.log("yo");
-				//$("#mapplic-containerMOBILE").toggleClass("toggled");
-				//$(".mapplic-search-form").toggle();
-				//$(".mapplic-accessibility-buttons").toggle();
 
 			return self;
 		}
@@ -500,7 +498,6 @@
 					    $(".mapplic-search-form").toggle();
 						$(".mapplic-accessibility-buttons").toggle();
 						$(".toggle-button").toggleClass("toggled");
-
 						$('html, body').animate({
 							scrollTop: self.container.offset().top
 						}, 400);
@@ -520,7 +517,7 @@
 			}
 
 			this.LSsearchQuery = function(keyword) {
-
+				$("#mapplic-containerMOBILE").toggleClass("toggled");
 				var route = "/form";
 
 				var url = route +"?search="+ keyword;
@@ -700,13 +697,7 @@
 					        $("#mapplic-containerMOBILE").toggleClass("toggled");
 					        $(".toggle-button").toggleClass("toggled");
 					        $(".mapplic-accessibility-buttons").toggle();
-					        console.log("click toggled");
-					        if(toggled == 0){
-					        	toggled = 1;
-					        }
-					        else{
-					        	toggled = 0;
-					        }					        					        
+					        console.log("click toggled");				        					        
 
 				}).appendTo(self.el);
 			}
@@ -748,7 +739,6 @@
 			var shownLevel;
 
 			self.container = $('<div></div>').addClass('mapplic-container').attr('id','mapplic-containerMOBILE').appendTo(self.el);
-			$("#mapplic-containerMOBILE").toggleClass("toggled");
 
 			self.map = $('<div></div>').addClass('mapplic-map').appendTo(self.container);
 			if (self.o.zoom) self.map.addClass('mapplic-zoomable');
