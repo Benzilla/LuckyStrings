@@ -9,6 +9,7 @@
 	
 	//PATCH
 	var count = 0;
+	var toggled = 1;
 	//PATCH
 
 	function LScheckRequest (url)
@@ -48,7 +49,8 @@
 				{
 					clearData();
 					processData(data);
-
+					console.log("Hello");
+					//$("#mapplic-containerMOBILE").toggleClass("toggled");
 					self.el.removeClass('mapplic-loading');
 					if (self.o.zoom) addControls();
 				}				
@@ -80,11 +82,15 @@
 				console.error('Couldn\'t load map data. (Make sure you are running the script through a server and not just opening the html file with your browser)');
 				alert('Data file missing or invalid!');
 			});
-
 			var url= document.URL;
 
 			if(LScheckRequest(url))
 				LSajaxReq(url);
+				//$("#wrapper").toggleClass("toggled");
+				console.log("yo");
+				//$("#mapplic-containerMOBILE").toggleClass("toggled");
+				//$(".mapplic-search-form").toggle();
+				//$(".mapplic-accessibility-buttons").toggle();
 
 			return self;
 		}
@@ -489,7 +495,7 @@
 
 					// Scroll back to map on mobile
 					if ($(window).width() < 600) {
-
+						$("#mapplic-containerMOBILE").toggleClass("toggled");
 						$("#wrapper").toggleClass("toggled");
 					    $(".mapplic-search-form").toggle();
 						$(".mapplic-accessibility-buttons").toggle();
@@ -693,7 +699,14 @@
 					        $(".mapplic-search-form").toggle();
 					        $("#mapplic-containerMOBILE").toggleClass("toggled");
 					        $(".toggle-button").toggleClass("toggled");
-					        $(".mapplic-accessibility-buttons").toggle();					        					        
+					        $(".mapplic-accessibility-buttons").toggle();
+					        console.log("click toggled");
+					        if(toggled == 0){
+					        	toggled = 1;
+					        }
+					        else{
+					        	toggled = 0;
+					        }					        					        
 
 				}).appendTo(self.el);
 			}
@@ -735,6 +748,7 @@
 			var shownLevel;
 
 			self.container = $('<div></div>').addClass('mapplic-container').attr('id','mapplic-containerMOBILE').appendTo(self.el);
+			$("#mapplic-containerMOBILE").toggleClass("toggled");
 
 			self.map = $('<div></div>').addClass('mapplic-map').appendTo(self.container);
 			if (self.o.zoom) self.map.addClass('mapplic-zoomable');
@@ -974,13 +988,15 @@
 					//PATCH
 					count++;
 
-					if (count==1){
+					if (count>1){
 
 						//window.alert("ok");
-						$("#wrapper").toggleClass("toggled");
-						$(".mapplic-search-form").toggle();
-						$(".mapplic-accessibility-buttons").toggle();
-						$(".toggle-button").toggleClass("toggled");
+						//$("#wrapper").toggleClass("toggled");
+						//$("#mapplic-containerMOBILE").toggleClass("toggled");
+						//$(".mapplic-search-form").toggle();
+						//$(".mapplic-accessibility-buttons").toggle();
+						//$(".toggle-button").toggleClass("toggled");
+						console.log("resize toggle");
 						count=0;
 
 					}

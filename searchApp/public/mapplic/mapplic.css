@@ -59,13 +59,12 @@
 
 	}
 	#mapplic-containerMOBILE.toggled{
-
-		position: absolute;
+/*		position: absolute;
 		height: 100%;
 	 	width: 100%;
 		background-color: #f8f8f8;
 		display: inline-block;
-		overflow: hidden;
+		overflow: hidden;*/
 		-webkit-filter: blur(3px);
 	    filter: blur(3px);
 
@@ -80,6 +79,8 @@
 	background-color: #f8f8f8;
 	display: inline-block;
 	overflow: hidden;
+	-webkit-filter: blur(0px);
+    filter: blur(0px);	
 }
 
 #mapplic-containerMOBILE.toggled{
@@ -90,6 +91,8 @@
 	background-color: #f8f8f8;
 	display: inline-block;
 	overflow: hidden;
+/*	-webkit-filter: blur(0px);
+    filter: blur(0px);	*/
 
 }
 
