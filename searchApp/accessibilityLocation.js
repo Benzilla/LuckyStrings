@@ -103,6 +103,8 @@ function populateJson(msg){
         locatObj.y = itemLocation[1];
         locatObj.category = itemLocation[2];
         locatObj.about = "";
+        locatObj.title = msg+i;
+
         mapplic.levels[itemLocation[2]].locations.push(cloneJsonObj(locatObj));
         console.log(locatObj);
     }
