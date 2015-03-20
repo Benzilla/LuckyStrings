@@ -1,3 +1,9 @@
+
+// stemmer
+var natural = require('natural');
+var stemmer = natural.PorterStemmer;
+stemmer.attach();
+
 var newquery =
 "SELECT "+
 "o.id as id, "+
@@ -35,7 +41,6 @@ roomLocations["Winterstoke (Front) Hall"] = new Array(0.4800,0.6017,0);
 roomLocations["Chinese Glass Gallery"] = new Array(0.4113,0.2205,2);
 roomLocations["Sea Dragons Gallery"] = new Array(0.5038,0.4550,0);
 roomLocations["South West Wildlife Gallery"] = new Array(0.3050,0.6433,0);
-
 
 var floor1Obj={"id":"1","name":"Ground Floor","title":"Ground Floor",
                "map":"img/floor1.svg",
@@ -143,12 +148,12 @@ var mysql = require('mysql');
 var queryDB = function (msg, conn, callback)
 {
 
+  console.log(msg.stem());
+
   if(!msg)
     msg="sdfsdfsdfsdfsdfsfd";
 
-  console.log(msg);
-
-  var localquery='% '+msg+'%';
+  var localquery='% '+msg.stem()+'%';
 
   // exact name or substring in description
   var inserts = [localquery, localquery, localquery];
