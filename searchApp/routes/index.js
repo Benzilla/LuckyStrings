@@ -51,6 +51,12 @@ router.get('/form', function(req, res) {
 
 });
 
+router.get('/about', function(req, res) {
+
+	res.render('about', { title: 'searchMuseum' });
+
+});
+
 
 router.get('/accessibility', function(req, res) {
 
