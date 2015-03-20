@@ -6,10 +6,9 @@
  //search PATCH to find the code of the PATCH
 
 (function($) {
-	
+
 	//PATCH
 	var count = 0;
-	var toggled = 1;
 	//PATCH
 
 	function LScheckRequest (url)
@@ -45,24 +44,21 @@
 		var LSajaxReq=function(url)
 		{
 			$.getJSON(url,function(data) {
-				if(data!=null)
-				{
-					clearData();
-					processData(data);
-					$("#mapplic-containerMOBILE").toggleClass("toggled");
-					self.el.removeClass('mapplic-loading');
-					if (self.o.zoom) addControls();
-				}				
-			});
+
+					if(data!=null)
+					{
+						clearData();
+						processData(data);
+
+						self.el.removeClass('mapplic-loading');
+						if (self.o.zoom) addControls();
+					}
+				});
 		}
 
 		var LSprocessJson= function(data)
 		{
-			processData(data);			
-			$("#wrapper").toggleClass("toggled");
-		    $(".mapplic-search-form").toggle();
-			$(".mapplic-accessibility-buttons").toggle();
-			$(".toggle-button").toggleClass("toggled");
+			processData(data);
 			self.el.removeClass('mapplic-loading');
 
 				// Controls
@@ -85,6 +81,7 @@
 				console.error('Couldn\'t load map data. (Make sure you are running the script through a server and not just opening the html file with your browser)');
 				alert('Data file missing or invalid!');
 			});
+
 			var url= document.URL;
 
 			if(LScheckRequest(url))
@@ -493,11 +490,13 @@
 
 					// Scroll back to map on mobile
 					if ($(window).width() < 600) {
-						$("#mapplic-containerMOBILE").toggleClass("toggled");
+
 						$("#wrapper").toggleClass("toggled");
 					    $(".mapplic-search-form").toggle();
-						$(".mapplic-accessibility-buttons").toggle();
+					 	$("#mapplic-containerMOBILE").toggleClass("toggled");
+						$(".mapplic-accessibility-buttons").toggleClass("toggled");
 						$(".toggle-button").toggleClass("toggled");
+
 						$('html, body').animate({
 							scrollTop: self.container.offset().top
 						}, 400);
@@ -517,7 +516,7 @@
 			}
 
 			this.LSsearchQuery = function(keyword) {
-				$("#mapplic-containerMOBILE").toggleClass("toggled");
+
 				var route = "/form";
 
 				var url = route +"?search="+ keyword;
@@ -691,13 +690,12 @@
 
 				$('<a></a>').attr('href', '#').attr('href', '#').addClass('toggle-button').click(function(e) {
 					        e.preventDefault();
-					        
+
 					        $("#wrapper").toggleClass("toggled");
 					        $(".mapplic-search-form").toggle();
 					        $("#mapplic-containerMOBILE").toggleClass("toggled");
+					        $(".mapplic-accessibility-buttons").toggleClass("toggled");
 					        $(".toggle-button").toggleClass("toggled");
-					        $(".mapplic-accessibility-buttons").toggle();
-					        console.log("click toggled");				        					        
 
 				}).appendTo(self.el);
 			}
@@ -952,7 +950,7 @@
 				// this is the right palce to resize but
 				// due to the fact that deveices may change width on rotation
 				// we need a dynamic resize and this work only on refresh
-				// therefore the patch is still here 
+				// therefore the patch is still here
 
 				// $("#wrapper").toggleClass("toggled");
 				// $(".mapplic-search-form").toggle();
@@ -978,15 +976,14 @@
 					//PATCH
 					count++;
 
-					if (count>1){
+					if (count==1){
 
 						//window.alert("ok");
-						//$("#wrapper").toggleClass("toggled");
-						//$("#mapplic-containerMOBILE").toggleClass("toggled");
-						//$(".mapplic-search-form").toggle();
-						//$(".mapplic-accessibility-buttons").toggle();
-						//$(".toggle-button").toggleClass("toggled");
-						console.log("resize toggle");
+						// $("#wrapper").toggleClass("toggled");
+						// $(".mapplic-search-form").toggle();
+						// $("#mapplic-containerMOBILE").toggleClass("toggled");
+						// $(".mapplic-accessibility-buttons").toggleClass("toggled");
+						// $(".toggle-button").toggleClass("toggled");
 						count=0;
 
 					}
@@ -2008,7 +2005,7 @@ String.prototype.removeStopWords = function() {
         'z',
         'zero'
     );
-         
+
     // Split out all the individual words in the phrase
     words = cleansed_string.split(" ");
     // Review all the words
@@ -2017,10 +2014,10 @@ String.prototype.removeStopWords = function() {
         for(y=0; y < stop_words.length; y++) {
             // Get the current word
             word = words[x].replace(/\s+|[^a-z]+/ig, "");   // Trim the word and remove non-alpha
-             
+
             // Get the stop word
             stop_word = stop_words[y];
-             
+
             // If the word matches the stop word, remove it from the keywords
             if(word.toLowerCase() == stop_word) {
                 // Build the regex
@@ -2029,7 +2026,7 @@ String.prototype.removeStopWords = function() {
                 regex_str += "|\\s+"+stop_word+"\\s*$";     // Last word
                 regex_str += "|\\s+"+stop_word+"\\s+";      // Word somewhere in the middle
                 regex = new RegExp(regex_str, "ig");
-             
+
                 // Remove the word from the keywords
                 cleansed_string = cleansed_string.replace(regex, " ");
             }
