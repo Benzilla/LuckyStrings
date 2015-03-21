@@ -157,7 +157,7 @@ var queryDB = function (msg, conn, callback)
   var multWordsQuery = "";
 
   //creates first part of query
-  var pattern = "%"+searchWords[0]+"%"
+  var pattern = "%"+searchWords[0].stem()+"%"
   var inserts = [pattern, pattern, pattern];
   multWordsQuery = mysql.format(newquery, inserts);
 
