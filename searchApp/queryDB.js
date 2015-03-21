@@ -24,8 +24,7 @@ var newquery =
 var opt = "AND (" +
 "simple_name LIKE ? "+
 "or description LIKE ? "+
-"or collection LIKE ? )"+
-")";
+"or collection LIKE ? )";
 
 var roomLocations = new Array();
 roomLocations["Glass Gallery"] = new Array(0.5263,0.4650,2);
@@ -153,14 +152,26 @@ var queryDB = function (msg, conn, callback)
   if(!msg)
     msg="sdfsdfsdfsdfsdfsfd";
 
-  var localquery='% '+msg.stem()+'%';
+
+  searchWords  = msg.split(" ");
+  var multWordsQuery = "";
+
+  //creates first part of query
+  var pattern = "%"+searchWords[0]+"%"
+  var inserts = [pattern, pattern, pattern];
+  multWordsQuery = mysql.format(newquery, inserts);
+
+  //if there are additional words, append opt clauses to query
+  if(searchWords.length>1){
+      for (i=1; i<searchWords.length; i++){
+        pattern= "%"+searchWords[i].stem()+"%";
+        inserts = [pattern, pattern, pattern];
+        multWordsQuery = multWordsQuery + mysql.format(opt, inserts);
+      }
+  }
 
   // exact name or substring in description
-  var inserts = [localquery, localquery, localquery];
-  localquery = mysql.format(newquery, inserts);
-
-  //console.log("Query: "+localquery);
-  conn.query( localquery, function(err, rows, fields) {
+  conn.query( multWordsQuery, function(err, rows, fields) {
 
       if (err) callback(null,err);
       var mapplicdata = populateJson(rows);
