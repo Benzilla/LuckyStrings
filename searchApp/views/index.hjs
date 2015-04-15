@@ -66,10 +66,14 @@
 
     <script type="text/javascript">
 
+    adjustvheight=90;
+    var vheight = document.getElementById('wrapper').clientHeight;
+    vheight = vheight - adjustvheight;
+
     $(document).ready(function() {
       $('#mapplic').mapplic({
         source: 'objects.json',
-        height: 520,
+        height: vheight,
         fullscreen:true,
         animate:true
       });
