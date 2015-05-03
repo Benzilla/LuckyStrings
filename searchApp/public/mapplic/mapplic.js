@@ -319,6 +319,15 @@
 
 			this.update = function(id) {
 				var url = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + this.param + '=' + id;
+				var currUrl = document.URL;
+				var form = currUrl.split("search=");
+				if(form!=null)
+				{
+					var form2=form[1].split("&");
+					console.log(form2);
+					url=window.location.protocol + "//" + window.location.host + window.location.pathname + '?search=' + form2[0] + '&' + this.param + '=' + id;
+				}
+				console.log(form);
 				window.history.pushState({path: url}, '', url);
 			}
 
@@ -945,18 +954,6 @@
 			level(shownLevel);
 
 			if ($(window).width() < 600) {
-
-				//PATCH
-				// this is the right palce to resize but
-				// due to the fact that deveices may change width on rotation
-				// we need a dynamic resize and this work only on refresh
-				// therefore the patch is still here
-
-				// $("#wrapper").toggleClass("toggled");
-				// $(".mapplic-search-form").toggle();
-				// $("#mapplic-containerMOBILE").toggleClass("toggled");
-				// $(".mapplic-accessibility-buttons").toggleClass("toggled");
-				// $(".toggle-button").toggleClass("toggled");
 			}
 
 
@@ -969,26 +966,6 @@
 				else
 				{
 					//self.container.height('100%');
-				}
-
-				if ($(window).width() < 600) {
-
-					//PATCH
-					count++;
-
-					if (count==1){
-
-						//window.alert("ok");
-						// $("#wrapper").toggleClass("toggled");
-						// $(".mapplic-search-form").toggle();
-						// $("#mapplic-containerMOBILE").toggleClass("toggled");
-						// $(".mapplic-accessibility-buttons").toggleClass("toggled");
-						// $(".toggle-button").toggleClass("toggled");
-						count=0;
-
-					}
-					//PATCH
-
 				}
 
 				var wr = self.container.width() / self.contentWidth,

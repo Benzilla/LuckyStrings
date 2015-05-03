@@ -48,8 +48,6 @@
     </div>
   </div> 
 
-
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -66,10 +64,12 @@
 
     <script type="text/javascript">
 
+    var vheight = document.getElementById('wrapper').clientHeight;
+
     $(document).ready(function() {
       $('#mapplic').mapplic({
         source: 'objects.json',
-        height: 520,
+        height: vheight,
         fullscreen:true,
         animate:true
       });
