@@ -6,7 +6,7 @@ var connection = mysql.createConnection(
       user     : 'root',
       password : 'root',
       database : 'museum',
-      port : 3306
+      port : 8889
     }
 );
 
