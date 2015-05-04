@@ -94,16 +94,16 @@ function populateJson(msg){
   mapplic.categories = [category0,category1,category2];
   var  i=0;
   for(var idx in roomLocations){
-      
+
       var itemLocation = roomLocations[msg+i];
-      
+
       if(itemLocation!=null){
         locatObj.id = msg+i;
         locatObj.x = itemLocation[0];
         locatObj.y = itemLocation[1];
         locatObj.category = itemLocation[2];
         locatObj.about = "";
-        locatObj.title = msg+i;
+        locatObj.title = msg;
 
         mapplic.levels[itemLocation[2]].locations.push(cloneJsonObj(locatObj));
         console.log(locatObj);
