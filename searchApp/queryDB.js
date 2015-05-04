@@ -161,9 +161,9 @@ var queryDB = function (msg, conn, callback)
   var inserts = [pattern, pattern, pattern];
   multWordsQuery = mysql.format(newquery, inserts);
 
-  //if there are additional words, append opt clauses to query
+  //if there are additional words, append opt clauses to query, max search terms 30
   if(searchWords.length>1){
-      for (i=1; i<searchWords.length; i++){
+      for (i=1; i<searchWords.length && i < 30; i++){
         pattern= "%"+searchWords[i].stem()+"%";
         inserts = [pattern, pattern, pattern];
         multWordsQuery = multWordsQuery + mysql.format(opt, inserts);
