@@ -1,0 +1,1 @@
+0 1 * * * rm ObjectLocator.sql && wget https://dl.dropboxusercontent.com/u/244902320/ObjectLocator.sql && mysql -u root -polgamuse -h localhost museum <ObjectLocator.sql

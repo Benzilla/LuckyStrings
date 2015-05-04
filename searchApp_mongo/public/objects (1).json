@@ -1,0 +1,24 @@
+{"mapwidth":"800","mapheight":"600","categories":[
+{"id":"0","title":"Ground Floor","color":"#99cccc","show":"false"},
+{"id":"1","title":"First Floor","color":"#339999","show":"false"},
+{"id":"2","title":"Second Floor","color":"#336666","show":"false"}],
+"levels":[
+
+{"id":"1","name":"Ground Floor","title":"Ground Floor","map":"img/floor1.svg","minimap":"img/floor1mini.jpg","locations":
+
+  [
+
+  
+  ]},
+
+  {"id":"2","name":"First Floor","title":"First Floor","map":"img/floor2.svg","minimap":"img/floor2mini.jpg","locations":
+
+    [
+
+      ]},
+
+      {"id":"3","name":"Second Floor","title":"Second Floor","map":"img/floor3.svg","minimap":"img/floor3mini.jpg","locations":
+
+    [
+
+      ]}]}

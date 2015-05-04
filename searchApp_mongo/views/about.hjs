@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="http://www.bristolmuseums.org.uk/wp-content/themes/bristol-museums/assets/img/favico/favicon.png" type="image/x-icon"/>
+    <title>Museum Search</title>
+    <link href="/stylesheets/hoveranimations.css" rel ="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/animate.css">
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <!-- Maplic -->
+    <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/map.css">
+    <link rel="stylesheet" type="text/css" href="mapplic/mapplic.css">
+    <link href="css/simple-sidebar.css" type="text/css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel ="stylesheet">
+
+
+  </head>
+
+  <body>
+
+    <div class ="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+<!--         <div class="navbar-brand navbar-right">| Bristol Museum and Art Gallery</div>
+ -->        <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div class="collapse navbar-collapse navHeaderCollapse">
+          <ul class ="nav navbar-nav navbar-left">
+            <li><a id="logoimg" href="http://www.bristolmuseums.org.uk/bristol-museum-and-art-gallery/"><img src="img/museumlogo.jpg" class ="logo" data-toggle="popover" tabindex="50" data-placement="right"></a></li>
+            <li class="active"><a href ="/">Home</a></li>
+            <li><a href ="https://www.surveymonkey.com/s/BNXC8PH" target="_blank">Feedback</a></li>
+            <li><a href ="/about">About</a></li>
+        </ul>
+         </div>
+
+        </div>
+    </div>
+
+    <!-- comment stuff-->
+
+    <div class="about_container">
+
+     <p class="about_container_Title"> About </p>
+
+      <p class="about_container_Text">
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse erat nisl, sagittis non magna ac, ullamcorper tempus tellus. Nam quis lacus ac ligula suscipit consectetur ullamcorper sed ex. Suspendisse in turpis tellus. Aenean vulputate dolor et arcu cursus sodales a quis metus. Pellentesque tincidunt lacus ac dolor fringilla, in elementum augue dictum. Donec dignissim imperdiet sem, ac hendrerit nulla sollicitudin a. Vestibulum tincidunt cursus mi, sit amet feugiat risus imperdiet a. Aenean semper libero quis dui blandit luctus. Pellentesque elit libero, euismod eu massa in, congue blandit arcu. Sed auctor massa ac accumsan convallis.
+
+      </p>
+
+      <p class="about_container_Text">
+
+       Nam vel ornare massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla sapien, ornare sed consequat in, laoreet nec augue. Donec sodales lacinia mauris, id porttitor libero eleifend quis. Praesent quis erat in sem consequat hendrerit maximus vel lacus. Nulla ut commodo nisl, non tempus sapien. Quisque ullamcorper eros ac urna sollicitudin lobortis.
+
+      </p>
+
+      <p class="about_container_Title"> About2 </p>
+
+      <p class="about_container_Text">
+
+      Donec posuere erat eu erat accumsan porttitor. Proin sit amet lacus id lacus vestibulum consectetur sit amet tincidunt odio. Quisque ac sollicitudin ligula. Ut eget libero vel nisi semper lobortis. Duis accumsan metus id ipsum placerat, vitae fermentum arcu ullamcorper. Sed quis turpis tristique, dapibus diam non, luctus est. Aliquam viverra interdum ipsum, vel dapibus mi scelerisque a. Sed semper posuere ante, ut vulputate ligula finibus in. Proin a odio convallis, fermentum eros in, venenatis nisl. Aenean ornare ex in purus aliquam accumsan. Nunc tristique suscipit arcu vestibulum tincidunt. In hac habitasse platea dictumst.
+
+      </p>
+
+      <p class="about_container_Text">
+
+      Nunc bibendum luctus orci ut iaculis. Nam nunc ex, placerat at dapibus vel, posuere mattis lorem. Aenean a porta elit. In feugiat tristique leo sed vehicula. Pellentesque sit amet mollis risus. In placerat sapien vel diam vulputate, ac gravida lacus blandit. Aliquam ut malesuada justo. Nam id lacus in ante vestibulum congue. Vestibulum commodo vel ex sit amet vehicula. Integer sed risus quis odio ultricies fermentum eget id purus.
+
+      </p>
+
+
+      <p class="about_container_Text">
+
+      Integer tincidunt commodo mauris sit amet tempus. Sed non leo tristique, ullamcorper sem pellentesque, imperdiet nunc. Donec arcu massa, viverra at malesuada et, aliquet sed mi. Phasellus sit amet malesuada magna, at viverra erat. Mauris et quam elementum, egestas lorem id, commodo quam. Ut in volutpat eros. Praesent at ipsum mauris. Integer facilisis leo lorem, ac aliquet mi venenatis vitae.
+
+      </p>
+
+    </div>
+
+  </body>
+</html>
