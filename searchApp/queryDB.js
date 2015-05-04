@@ -15,10 +15,12 @@ var newquery =
 "OBJECTS o "+
 "INNER JOIN DISPLAY d ON d.id = o.display_id "+
 "where"+
-"(simple_name LIKE ? "+
+"(collection LIKE ? "+
 "or description LIKE ? "+
-"or collection LIKE ? )";
-// "ORDER BY "+
+"or simple_name  LIKE ? )";
+
+var orderbit =
+"order by case when simple_name like ? then 0 else 1 end, simple_name";
 // "d.l2";
 
 var opt = "AND (" +
@@ -169,7 +171,7 @@ var queryDB = function (msg, conn, callback)
         multWordsQuery = multWordsQuery + mysql.format(opt, inserts);
       }
   }
-
+ multWordsQuery += mysql.format(orderbit,searchWords[0].stem()+"%");
   // exact name or substring in description
   conn.query( multWordsQuery, function(err, rows, fields) {
 
