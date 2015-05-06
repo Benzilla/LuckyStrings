@@ -7,45 +7,6 @@
 
 (function($) {
 
-<<<<<<< HEAD
-=======
-	var GLOBAL_speedKbs = 0;
-	function speed_test (callback) {
-		//speed test.js 50.276 bytes image on server
-		var imageAddr = "http://ec2-54-148-187-69.us-west-2.compute.amazonaws.com/img/museumlogo.jpg";
-		var downloadSize = 50276;
-		var download = new Image();
-		var startTime,endTime;
-		
-		download.onload = function () {
-        	endTime = (new Date()).getTime();
-        	showResults();
-   
-    	}
-    	download.onerror = function (err, msg) {
-        	console.log("offline");
-    	}
-		startTime = (new Date()).getTime();
-    	var cacheBuster = "?nnn=" + startTime;
-    	download.src = imageAddr + cacheBuster;
-
-    	function showResults() {
-        	var duration = (endTime - startTime) / 1000;
-        	var bitsLoaded = downloadSize * 8;
-        	var speedBps = (bitsLoaded / duration).toFixed(2);
-        	var speedKbps = (speedBps / 1024).toFixed(2);
-        	var speedMbps = (speedKbps / 1024).toFixed(2);
-        	console.log("Your connection speed is:\n" + 
-        	   	speedBps + " bps\n"   + 
-        	   	speedKbps + " kbps\n" + 
-        	   	speedMbps + " Mbps\n"	
-        	);
-        	GLOBAL_speedKbs = speedKbps;
-        	callback(speedKbps);
-   		}
-	}
-
->>>>>>> 94ed9e861e4da233a96c6bb1d8638542b53e7442
 	//PATCH
 	var count = 0;
 	//PATCH
@@ -82,7 +43,6 @@
 
 		var LSajaxReq=function(url)
 		{
-<<<<<<< HEAD
 			var startTime = (new Date()).getTime();
 			$.getJSON(url,function(data) {
 
@@ -112,23 +72,6 @@
         		   	speedMbps + " Mbps\n"	);
         		return speedKbps;
    			}
-=======
-			speed_test( function (speed){
-				$.getJSON(url,function(data) {
-
-					if(data!=null)
-					{
-						clearData();
-						var form = url.split("search=");
-						console.log(speed)
-						if(speed<300)// 3g/2g speed connection enalbles caching
-							window.localStorage.setItem(form[1], JSON.stringify(data));
-						LSprocessJson(data);
-						//console.log(data);
-					}
-				});
-			});
->>>>>>> 94ed9e861e4da233a96c6bb1d8638542b53e7442
 		}
 
 		var LSprocessJson= function(data)
