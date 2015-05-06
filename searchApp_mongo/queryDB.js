@@ -152,8 +152,7 @@ var queryDB = function (msg, conn, callback)
   console.log(msg.stem());
 
   if(!msg)
-    msg="sdfsdfsdfsdfsdfsfd";
-
+    msg="sidufpaosifuapsoiufpasoidufasfpdoi";
 
   searchWords  = msg.split(" ");
   var multWordsQuery = "";

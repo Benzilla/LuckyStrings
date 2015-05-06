@@ -7,6 +7,42 @@
 
 (function($) {
 
+	var GLOBAL_speedKbs = 0;
+	function speed_test (callback) {
+		//speed test.js 50.276 bytes image on server
+		var imageAddr = "http://ec2-54-148-187-69.us-west-2.compute.amazonaws.com/img/museumlogo.jpg";
+		var downloadSize = 50276;
+		var download = new Image();
+		var startTime,endTime;
+		
+		download.onload = function () {
+        	endTime = (new Date()).getTime();
+        	showResults();
+   
+    	}
+    	download.onerror = function (err, msg) {
+        	console.log("offline");
+    	}
+		startTime = (new Date()).getTime();
+    	var cacheBuster = "?nnn=" + startTime;
+    	download.src = imageAddr + cacheBuster;
+
+    	function showResults() {
+        	var duration = (endTime - startTime) / 1000;
+        	var bitsLoaded = downloadSize * 8;
+        	var speedBps = (bitsLoaded / duration).toFixed(2);
+        	var speedKbps = (speedBps / 1024).toFixed(2);
+        	var speedMbps = (speedKbps / 1024).toFixed(2);
+        	console.log("Your connection speed is:\n" + 
+        	   	speedBps + " bps\n"   + 
+        	   	speedKbps + " kbps\n" + 
+        	   	speedMbps + " Mbps\n"	
+        	);
+        	GLOBAL_speedKbs = speedKbps;
+        	callback(speedKbps);
+   		}
+	}
+
 	//PATCH
 	var count = 0;
 	//PATCH
@@ -43,26 +79,28 @@
 
 		var LSajaxReq=function(url)
 		{
-			$.getJSON(url,function(data) {
+			speed_test( function (speed){
+				$.getJSON(url,function(data) {
 
 					if(data!=null)
 					{
 						clearData();
 						var form = url.split("search=");
-						//save local storage
-						window.localStorage.setItem(form[1], JSON.stringify(data));
+						console.log(speed)
+						if(speed<300)// 3g/2g speed connection enalbles caching
+							window.localStorage.setItem(form[1], JSON.stringify(data));
 						LSprocessJson(data);
-						console.log(data);
+						//console.log(data);
 					}
 				});
+			});
 		}
 
 		var LSprocessJson= function(data)
 		{
 			processData(data);
 			self.el.removeClass('mapplic-loading');
-
-				// Controls
+			// Controls
 			if (self.o.zoom) addControls();
 
 		};
@@ -535,6 +573,7 @@
 
       			//check local storage
 				var data = window.localStorage.getItem(keyword);
+				var data = null;
 				if(data!=null){
 					console.log('no call');
 					json_data=JSON.parse(data)
