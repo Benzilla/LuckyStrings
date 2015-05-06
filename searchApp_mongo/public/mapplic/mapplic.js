@@ -7,42 +7,6 @@
 
 (function($) {
 
-	var GLOBAL_speedKbs = 0;
-	function speed_test (callback) {
-		//speed test.js 50.276 bytes image on server
-		var imageAddr = "http://ec2-54-148-187-69.us-west-2.compute.amazonaws.com/img/museumlogo.jpg";
-		var downloadSize = 50276;
-		var download = new Image();
-		var startTime,endTime;
-		
-		download.onload = function () {
-        	endTime = (new Date()).getTime();
-        	showResults();
-   
-    	}
-    	download.onerror = function (err, msg) {
-        	console.log("offline");
-    	}
-		startTime = (new Date()).getTime();
-    	var cacheBuster = "?nnn=" + startTime;
-    	download.src = imageAddr + cacheBuster;
-
-    	function showResults() {
-        	var duration = (endTime - startTime) / 1000;
-        	var bitsLoaded = downloadSize * 8;
-        	var speedBps = (bitsLoaded / duration).toFixed(2);
-        	var speedKbps = (speedBps / 1024).toFixed(2);
-        	var speedMbps = (speedKbps / 1024).toFixed(2);
-        	console.log("Your connection speed is:\n" + 
-        	   	speedBps + " bps\n"   + 
-        	   	speedKbps + " kbps\n" + 
-        	   	speedMbps + " Mbps\n"	
-        	);
-        	GLOBAL_speedKbs = speedKbps;
-        	callback(speedKbps);
-   		}
-	}
-
 	//PATCH
 	var count = 0;
 	//PATCH
@@ -79,21 +43,35 @@
 
 		var LSajaxReq=function(url)
 		{
-			speed_test( function (speed){
-				$.getJSON(url,function(data) {
+			var startTime = (new Date()).getTime();
+			$.getJSON(url,function(data) {
 
 					if(data!=null)
 					{
+						var endTime = (new Date()).getTime();
 						clearData();
 						var form = url.split("search=");
-						console.log(speed)
+						var string_data=JSON.stringify(data);
+						var downloadSize=string_data.length;
+						var speed = showResults(startTime, endTime, downloadSize);
 						if(speed<300)// 3g/2g speed connection enalbles caching
-							window.localStorage.setItem(form[1], JSON.stringify(data));
+							window.localStorage.setItem(form[1], string_data);
 						LSprocessJson(data);
-						//console.log(data);
 					}
-				});
 			});
+
+			function showResults(startTime, endTime, downloadSize) {
+        		var duration = (endTime - startTime)/1000;
+        		var bitsLoaded = downloadSize * 32;
+        		var speedBps = (bitsLoaded / duration).toFixed(2);
+        		var speedKbps = (speedBps / 1024).toFixed(2);
+        		var speedMbps = (speedKbps / 1024).toFixed(2);
+        		console.log("Your connection speed is:\n" + 
+        		   	speedBps + " bps\n"   + 
+        		   	speedKbps + " kbps\n" + 
+        		   	speedMbps + " Mbps\n"	);
+        		return speedKbps;
+   			}
 		}
 
 		var LSprocessJson= function(data)
