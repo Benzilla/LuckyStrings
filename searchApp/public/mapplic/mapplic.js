@@ -81,10 +81,11 @@
 					if(data!=null)
 					{
 						clearData();
-						processData(data);
-
-						self.el.removeClass('mapplic-loading');
-						if (self.o.zoom) addControls();
+						var form = url.split("search=");
+						//save local storage
+						window.localStorage.setItem(form[1], JSON.stringify(data));
+						LSprocessJson(data);
+						console.log(data);
 					}
 				});
 		}
@@ -486,7 +487,7 @@
 						}
 						else
 						{
-						    s.search(keyword);
+						  //  s.search(keyword);
 						}
 
 					}).prependTo(form);
@@ -565,7 +566,18 @@
 
       			history.pushState(null, null, url );
 
-      			LSajaxReq(url);
+      			//check local storage
+				var data = window.localStorage.getItem(keyword);
+				if(data!=null){
+					console.log('no call');
+					json_data=JSON.parse(data)
+					console.log(json_data);
+					clearData();
+					LSprocessJson(json_data);
+				}
+				else{
+      				LSajaxReq(url);
+      			}
 
 			}
 
