@@ -1,0 +1,316 @@
+{
+	"mapwidth": "800",
+	"mapheight": "600",
+	"categories":[
+	],
+	"levels": [
+
+		{
+			"id": "base",
+			"name": "First Floor",
+			"title": "First Floor",
+			"map": "img/floor1.svg",
+			"minimap": "img/floor1mini.jpg",
+			"locations": [
+
+			{
+					"id": "Cafe",
+					"title": "Cafe",
+					"about": "The best place to spend the afternoon",
+					"pin": "hidden",
+					"description": "<p>This is an awesome coffee table.<p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean viverra laoreet imperdiet. Praesent viverra, enim at malesuada dignissim, ante purus vestibulum turpis, nec molestie ipsum mauris non risus. In hac habitasse platea dictumst. Integer porta dignissim magna, at sollicitudin neque aliquam eget. Pellentesque dapibus, augue eu ornare mattis, est mauris volutpat ligula, ac ornare turpis turpis sit amet elit.</p>",
+					"x": "0.5975",
+					"y": "0.1717",
+					"zoom": "3"
+				},
+
+			]
+
+		},
+		{
+			"id": "base",
+			"name": "First Floor",
+			"title": "First Floor",
+			"map": "img/floor1.svg",
+			"minimap": "img/floor1mini.jpg",
+			"locations": [
+				{
+					"id": "Cafe",
+					"title": "Cafe",
+					"about": "The best place to spend the afternoon",
+					"pin": "hidden",
+					"description": "<p>This is an awesome coffee table.<p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean viverra laoreet imperdiet. Praesent viverra, enim at malesuada dignissim, ante purus vestibulum turpis, nec molestie ipsum mauris non risus. In hac habitasse platea dictumst. Integer porta dignissim magna, at sollicitudin neque aliquam eget. Pellentesque dapibus, augue eu ornare mattis, est mauris volutpat ligula, ac ornare turpis turpis sit amet elit.</p>",
+					"x": "0.5975",
+					"y": "0.1717",
+					"zoom": "3"
+				},
+				{
+					"id": "CostumeJewelry",
+					"title": "Costume Jewelry",
+					"about": "Stairs to the top floor",
+					"description": "Let's go upstairs!",
+					"pin": "hidden",
+					"x": "0.6113",
+					"y": "0.2250",
+					"zoom": "3"
+				},
+				{
+					"id": "Curiosity",
+					"title": "Curiosity",
+					"about": "An eight-person dining table",
+					"description": "<img src=\"images/logo.png\" alt=\"Mapplic\"><p>An eight-person dining table with an image.<p>",
+					"pin": "hidden",
+					"x": "0.6900",
+					"y": "0.3233",
+					"zoom": "3"
+				},
+				{
+					"id": "Tapestry",
+					"title": "Tapestry",
+					"about": "For the perfect coffee",
+					"description": "Coffee Machine",
+					"pin": "hidden",
+					"x": "0.6725",
+					"y": "0.4633",
+					"zoom": "3"
+				},
+				{
+					"id": "AssyrianReliefs",
+					"title": "Assyrian Reliefs",
+					"about": "This is where the magic happens",
+					"description": "It's the perfect home workspace you've always dreamed about.",
+					"pin": "hidden",
+					"x": "0.6625",
+					"y": "0.5450",
+					"zoom": "3"
+				},
+				{
+					"id": "Egypt",
+					"title": "Egypt",
+					"about": "Well equipped kitchen",
+					"description": "<p>Welcome to the kitchen.</p>",
+					"pin": "hidden",
+					"x": "0.6438",
+					"y": "0.6900",
+					"zoom": "3"
+				},
+				{
+					"id": "TempExhibits",
+					"title": "Temporary Exhibits",
+					"about": "Well equipped kitchen",
+					"description": "<p>Welcome to the kitchen.</p>",
+					"pin": "hidden",
+					"x": "0.3513",
+					"y": "0.3083",
+					"zoom": "3"
+				},
+				{
+					"id": "Shop",
+					"title": "Shop",
+					"about": "Well equipped kitchen",
+					"description": "<p>Welcome to the kitchen.</p>",
+					"pin": "hidden",
+					"x": "0.3263",
+					"y": "0.4867",
+					"zoom": "3"
+				},
+				{
+					"id": "BritishAndSouthWestWildlife",
+					"title": "British & South West Wildlife",
+					"about": "Well equipped kitchen",
+					"description": "<p>Welcome to the kitchen.</p>",
+					"pin": "hidden",
+					"x": "0.3088",
+					"y": "0.6267",
+					"zoom": "3"
+				},
+				{
+					"id": "RearHall",
+					"title": "Rear Hall",
+					"about": "Well equipped kitchen",
+					"description": "<p>Welcome to the kitchen.</p>",
+					"pin": "hidden",
+					"x": "0.5175",
+					"y": "0.3483",
+					"zoom": "3"
+				},{
+					"id": "SeaDragons",
+					"title": "Sea Dragons",
+					"about": "Well equipped kitchen",
+					"description": "<p>Welcome to the kitchen.</p>",
+					"pin": "hidden",
+					"x": "0.5038",
+					"y": "0.4600",
+					"zoom": "3"
+				},{
+					"id": "FrontHall",
+					"title": "Front Hall",
+					"about": "Well equipped kitchen",
+					"description": "<p>Welcome to the kitchen.</p>",
+					"pin": "hidden",
+					"x": "0.4813",
+					"y": "0.6117",
+					"zoom": "3"
+				},
+				{
+					"id": "Entrance",
+					"title": "Entrance",
+					"about": "Could be a motto",
+					"description": "lol",
+					"pin": "hidden",
+					"x": "0.4575",
+					"y": "0.7883",
+					"zoom": "3"
+				}
+			]
+		},
+		{
+			"id": "floor2",
+			"name": "Second Floor",
+			"title": "Second Floor",
+			"map": "img/floor2.svg",
+			"minimap": "img/floor2mini.jpg",
+			"locations": [
+				{
+					"id": "WorldWildlifeGallery",
+					"title": "World Wildlife Gallery",
+					"about": "The best place to spend the afternoon",
+					"pin": "hidden",
+					"description": "<p>This is an awesome coffee table.<p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean viverra laoreet imperdiet. Praesent viverra, enim at malesuada dignissim, ante purus vestibulum turpis, nec molestie ipsum mauris non risus. In hac habitasse platea dictumst. Integer porta dignissim magna, at sollicitudin neque aliquam eget. Pellentesque dapibus, augue eu ornare mattis, est mauris volutpat ligula, ac ornare turpis turpis sit amet elit.</p>",
+					"x": "0.5038",
+					"y": "0.1850",
+					"zoom": "3"
+				},
+				{
+					"id": "GypsyWagon",
+					"title": "Gypsy Wagon",
+					"about": "The best place to spend the afternoon",
+					"pin": "hidden",
+					"description": "<p>This is an awesome coffee table.<p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean viverra laoreet imperdiet. Praesent viverra, enim at malesuada dignissim, ante purus vestibulum turpis, nec molestie ipsum mauris non risus. In hac habitasse platea dictumst. Integer porta dignissim magna, at sollicitudin neque aliquam eget. Pellentesque dapibus, augue eu ornare mattis, est mauris volutpat ligula, ac ornare turpis turpis sit amet elit.</p>",
+					"x": "0.6675",
+					"y": "0.2967",
+					"zoom": "3"
+				},
+				{
+					"id": "BritishWildLife",
+					"title": "British Wildlife",
+					"about": "The best place to spend the afternoon",
+					"pin": "hidden",
+					"description": "<p>This is an awesome coffee table.<p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean viverra laoreet imperdiet. Praesent viverra, enim at malesuada dignissim, ante purus vestibulum turpis, nec molestie ipsum mauris non risus. In hac habitasse platea dictumst. Integer porta dignissim magna, at sollicitudin neque aliquam eget. Pellentesque dapibus, augue eu ornare mattis, est mauris volutpat ligula, ac ornare turpis turpis sit amet elit.</p>",
+					"x": "0.6538",
+					"y": "0.3917",
+					"zoom": "3"
+				},
+				{
+					"id": "Dinosaurs",
+					"title": "Dinosaurs",
+					"about": "The best place to spend the afternoon",
+					"pin": "hidden",
+					"description": "<p>This is an awesome coffee table.<p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean viverra laoreet imperdiet. Praesent viverra, enim at malesuada dignissim, ante purus vestibulum turpis, nec molestie ipsum mauris non risus. In hac habitasse platea dictumst. Integer porta dignissim magna, at sollicitudin neque aliquam eget. Pellentesque dapibus, augue eu ornare mattis, est mauris volutpat ligula, ac ornare turpis turpis sit amet elit.</p>",
+					"x": "0.5625",
+					"y": "0.5100",
+					"zoom": "3"
+				},
+				{
+					"id": "GeologyAndMinerals",
+					"title": "Geology & Minerals",
+					"about": "The best place to spend the afternoon",
+					"pin": "hidden",
+					"description": "<p>This is an awesome coffee table.<p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean viverra laoreet imperdiet. Praesent viverra, enim at malesuada dignissim, ante purus vestibulum turpis, nec molestie ipsum mauris non risus. In hac habitasse platea dictumst. Integer porta dignissim magna, at sollicitudin neque aliquam eget. Pellentesque dapibus, augue eu ornare mattis, est mauris volutpat ligula, ac ornare turpis turpis sit amet elit.</p>",
+					"x": "0.3313",
+					"y": "0.4100",
+					"zoom": "3"
+				},
+				{
+					"id": "TemporaryExhibitsTwo",
+					"title": "Temporary Exhibits",
+					"about": "The best place to spend the afternoon",
+					"pin": "hidden",
+					"description": "<p>This is an awesome coffee table.<p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean viverra laoreet imperdiet. Praesent viverra, enim at malesuada dignissim, ante purus vestibulum turpis, nec molestie ipsum mauris non risus. In hac habitasse platea dictumst. Integer porta dignissim magna, at sollicitudin neque aliquam eget. Pellentesque dapibus, augue eu ornare mattis, est mauris volutpat ligula, ac ornare turpis turpis sit amet elit.</p>",
+					"x": "0.6350",
+					"y": "0.5883",
+					"zoom": "3"
+				},
+				{
+					"id": "MapsOfBristol",
+					"title": "Maps Of Bristol",
+					"about": "The best place to spend the afternoon",
+					"pin": "hidden",
+					"description": "<p>This is an awesome coffee table.<p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean viverra laoreet imperdiet. Praesent viverra, enim at malesuada dignissim, ante purus vestibulum turpis, nec molestie ipsum mauris non risus. In hac habitasse platea dictumst. Integer porta dignissim magna, at sollicitudin neque aliquam eget. Pellentesque dapibus, augue eu ornare mattis, est mauris volutpat ligula, ac ornare turpis turpis sit amet elit.</p>",
+					"x": "0.4550",
+					"y": "0.6133",
+					"zoom": "3"
+				}
+			]
+		},
+		{
+			"id": "floor3",
+			"name": "Third Floor",
+			"title": "Third Floor",
+			"map": "img/floor3.svg",
+			"minimap": "img/floor3mini.jpg",
+			"locations": [
+				{
+					"id": "EasternArt",
+					"title": "Eastern Art",
+					"about": "The best place to spend the afternoon",
+					"pin": "hidden",
+					"description": "<p>This is an awesome coffee table.<p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean viverra laoreet imperdiet. Praesent viverra, enim at malesuada dignissim, ante purus vestibulum turpis, nec molestie ipsum mauris non risus. In hac habitasse platea dictumst. Integer porta dignissim magna, at sollicitudin neque aliquam eget. Pellentesque dapibus, augue eu ornare mattis, est mauris volutpat ligula, ac ornare turpis turpis sit amet elit.</p>",
+					"x": "0.5425",
+					"y": "0.1517",
+					"zoom": "3"
+				},
+				{
+					"id": "ChineseGlass",
+					"title": "Chinese Glass",
+					"about": "The best place to spend the afternoon",
+					"pin": "hidden",
+					"description": "<p>This is an awesome coffee table.<p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean viverra laoreet imperdiet. Praesent viverra, enim at malesuada dignissim, ante purus vestibulum turpis, nec molestie ipsum mauris non risus. In hac habitasse platea dictumst. Integer porta dignissim magna, at sollicitudin neque aliquam eget. Pellentesque dapibus, augue eu ornare mattis, est mauris volutpat ligula, ac ornare turpis turpis sit amet elit.</p>",
+					"x": "0.4113",
+					"y": "0.2117",
+					"zoom": "3"
+				},
+				{
+					"id": "TemporaryExhibitsThree",
+					"title": "Temporary Exhibits",
+					"about": "The best place to spend the afternoon",
+					"pin": "hidden",
+					"description": "<p>This is an awesome coffee table.<p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean viverra laoreet imperdiet. Praesent viverra, enim at malesuada dignissim, ante purus vestibulum turpis, nec molestie ipsum mauris non risus. In hac habitasse platea dictumst. Integer porta dignissim magna, at sollicitudin neque aliquam eget. Pellentesque dapibus, augue eu ornare mattis, est mauris volutpat ligula, ac ornare turpis turpis sit amet elit.</p>",
+					"x": "0.4900",
+					"y": "0.2667",
+					"zoom": "3"
+				},
+				{
+					"id": "PotteryAndCeramics",
+					"title": "Pottery & Ceramics",
+					"about": "The best place to spend the afternoon",
+					"pin": "hidden",
+					"description": "<p>This is an awesome coffee table.<p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean viverra laoreet imperdiet. Praesent viverra, enim at malesuada dignissim, ante purus vestibulum turpis, nec molestie ipsum mauris non risus. In hac habitasse platea dictumst. Integer porta dignissim magna, at sollicitudin neque aliquam eget. Pellentesque dapibus, augue eu ornare mattis, est mauris volutpat ligula, ac ornare turpis turpis sit amet elit.</p>",
+					"x": "0.6738",
+					"y": "0.3450",
+					"zoom": "3"
+				},
+				{
+					"id": "BristolSchoolOfArtistsAndSilver",
+					"title": "Bristol School Of Artists & Silver",
+					"about": "The best place to spend the afternoon",
+					"pin": "hidden",
+					"description": "<p>This is an awesome coffee table.<p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean viverra laoreet imperdiet. Praesent viverra, enim at malesuada dignissim, ante purus vestibulum turpis, nec molestie ipsum mauris non risus. In hac habitasse platea dictumst. Integer porta dignissim magna, at sollicitudin neque aliquam eget. Pellentesque dapibus, augue eu ornare mattis, est mauris volutpat ligula, ac ornare turpis turpis sit amet elit.</p>",
+					"x": "0.3625",
+					"y": "0.3700",
+					"zoom": "3"
+				},
+				{
+					"id": "Glass",
+					"title": "Glass",
+					"about": "The best place to spend the afternoon",
+					"pin": "hidden",
+					"description": "<p>This is an awesome coffee table.<p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean viverra laoreet imperdiet. Praesent viverra, enim at malesuada dignissim, ante purus vestibulum turpis, nec molestie ipsum mauris non risus. In hac habitasse platea dictumst. Integer porta dignissim magna, at sollicitudin neque aliquam eget. Pellentesque dapibus, augue eu ornare mattis, est mauris volutpat ligula, ac ornare turpis turpis sit amet elit.</p>",
+					"x": "0.5263",
+					"y": "0.4650",
+					"zoom": "3"
+				}
+			]
+		}
+	]
+}

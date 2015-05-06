@@ -1,0 +1,58 @@
+This demonstrates bootstrap popover on an image.
+<br/>NOTE: Image MUST have tabindex property for the popover trigger to work
+<br/><br/>
+
+<table>
+    <tr>
+        <td>row 1</td>
+        <td>
+        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS-eTmHxgicEfq4K-sEz_X52cq56uBP2l8cr_q8ivOavSIca5TYtQ"
+            data-toggle="popover" tabindex="50" data-placement="right"/>
+         
+        </td>
+    </tr>
+        <tr>
+        <td>row 2</td>
+        <td>
+            <button 
+            type="button" 
+            class="btn btn-default popover-dismiss" 
+            data-toggle="popover" data-placement="right">
+          Popover on right
+        </button>
+        </td>
+    </tr>
+        <tr>
+        <td>row 3</td>
+        <td>
+          <button 
+            type="button" 
+            class="btn btn-default popover-dismiss" 
+            data-toggle="popover" data-placement="right">
+          Popover on right
+        </button>
+        </td>
+    </tr>
+</table>
+
+<ul id="ToolMenu" style="" class="hide">
+    <li onclick="showBroadcastModal()"><span style="">Broadcast</span></li>
+    <li><a data-url='@Url.Action("ExportToExcel")' onclick="toolboxExport($(this))"><span style="">Export</span></a></li>
+    <li id="toolMenu_Snapshot" style="" onclick="showSnapshotModal()"><span style="">Snapshot</span></li>
+    <li id="toolMenu_Slips" style="" onclick="showSlipModal()"><span style="">Slips</span></li>
+    <li id="toolMenu_Roster" style="" onclick="showRosterModal()"><span style="">Roster</span></li>
+    <li id="toolMenu_Delete" style="" onclick="deleteAssignment()"><span style="">Delete</span></li>
+</ul>
+
+<script>
+    $(function(){
+   $('[data-toggle=popover]').popover({
+          trigger: 'focus',
+          html: true,
+          content: function () {
+                return $('#ToolMenu').html();
+          },
+          title: 'Toolbox'
+    }) 
+});
+</script>

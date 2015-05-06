@@ -43,6 +43,39 @@
 
 		var LSajaxReq=function(url)
 		{
+		
+		//handels request and local storage
+		//var LSajaxReq=function(url)
+		//{
+		//	var form = url.split("search=");
+		//	var data = window.localStorage.getItem(form[1]);
+		//	if(data!=null){
+		//		console.log('no call');
+		//		json_data=JSON.parse(data)
+		//		console.log(json_data);
+		//		clearData();
+		//		processData(json_data);
+		//		self.el.removeClass('mapplic-loading');
+		//		if (self.o.zoom) addControls();
+		//	}
+		//	else{
+		//		$.getJSON(url,function(data) {
+		//				if(data!=null)
+		//				{
+		//					console.log('call');
+		//					
+		//					var form = url.split("search=");
+		//					window.localStorage.setItem(form[1], JSON.stringify(data));
+		//					clearData();
+		//					processData(data);
+		//					self.el.removeClass('mapplic-loading');
+		//					if (self.o.zoom) addControls();
+		//				}
+		//		});
+		//	}
+		//
+		//}
+		
 			$.getJSON(url,function(data) {
 
 					if(data!=null)
