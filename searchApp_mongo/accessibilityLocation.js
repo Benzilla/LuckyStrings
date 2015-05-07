@@ -16,6 +16,7 @@ var roomLocations = new Array();
 roomLocations["toilet0"] = new Array(0.5720,0.4800,0);
 roomLocations["toilet1"] = new Array(0.3975,0.4800,0);
 roomLocations["toilet2"] = new Array(0.5750,0.4300,0);
+roomLocations["toilet3"] = new Array(0.4050,0.4300,0);
 roomLocations["information0"] = new Array(0.5715,0.6120,0);
 roomLocations["lifts0"] = new Array(0.7175,0.4600,0);
 roomLocations["lifts1"]= new Array(0.7188,0.4450,1);

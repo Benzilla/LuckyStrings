@@ -116,7 +116,7 @@
       		<div id = "center_form">
       		<div>
       		<p id ="font_cover">
-      		To use the search tool, simply enter keywords of your choice into the search box provided on the left of the screen. If you cannot see the search box, or wish to hide it, simply click the arrow button at the top left of the screen. Results from your search will be displayed in both a list under the search box, and via pins on the map.
+      		To use the search tool, simply enter keywords of your choice into the search box. If you cannot see the search box, or wish to hide it, simply click the arrow button at the top left of the screen. Results from your search will be displayed in both a list under the search box, and via pins on the map.
       		</p>
       		</div>
 				<form  action="/form" class="pure-form">
