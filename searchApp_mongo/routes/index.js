@@ -33,7 +33,7 @@ var REFRESHING_busy = false;
 router.get('/', function(req, res) {
 
 	var urlObj=url.parse(req.url,true);
-  	res.render('index', { title: 'searchMuseum' });
+  	res.render('cover', { title: 'searchMuseum' });
 
 });
 
