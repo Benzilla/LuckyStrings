@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="/stylesheets/animate.css">
     <!-- Bootstrap -->
     <link href="/css/bootstrap.css" rel="stylesheet">
+    <!-- Yamm -->
+    <link href="yamm/demo.css" rel="stylesheet">
+    <link href="yamm/yamm.css" rel="stylesheet">
     <!-- Maplic -->
     <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/map.css">
@@ -22,24 +25,80 @@
 
   <body>
 
-    <div class ="navbar navbar-inverse navbar-static-top">
+<div class="navbar yamm navbar-inverse navbar-static-top">
       <div class="container">
-<!--         <div class="navbar-brand navbar-right">| Bristol Museum and Art Gallery</div>
- -->        <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-
-        <div class="collapse navbar-collapse navHeaderCollapse">
-          <ul class ="nav navbar-nav navbar-left">
-            <li><a id="logoimg" href="http://www.bristolmuseums.org.uk/bristol-museum-and-art-gallery/"><img src="img/museumlogo.jpg" class ="logo" data-toggle="popover" tabindex="50" data-placement="right"></a></li>
-            <li class="active"><a href ="#">Home</a></li>
-            <li><a href ="https://www.surveymonkey.com/s/BNXC8PH" target="_blank">Feedback</a></li>
-            <li><a href ="/about">About</a></li>
-        </ul>
-         </div>
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="http://www.bristolmuseums.org.uk/bristol-museum-and-art-gallery/" class="navbar-brand">The Bristol Museum & Art Gallery</a>
         </div>
+        <div id="navbar-collapse-1" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+
+            <li><a href="http://www.bristolmuseums.org.uk/bristol-museum-and-art-gallery/">Home</a></li>
+
+            <!-- How To Use Drop-down -->
+            <li class="dropdown yamm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">How to Use<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <div class="yamm-content">
+                    <div class="row">
+                      <div id="accordion" class="panel-group">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Searching the Museum</a></h4>
+                          </div>
+                          <div id="collapseOne" class="panel-collapse collapse in">
+                            <div class="panel-body">To use the search tool, simply enter keywords of your choice into the search box provided on the left of the screen. If you cannot see the search box, or wish to hide it, simply click the arrow button at the top left of the screen. Results from your search will be displayed in both a list under the search box, and via pins on the map. </div>
+                          </div>
+                        </div>
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Navigating the Maps</a></h4>
+                          </div>
+                          <div id="collapseTwo" class="panel-collapse collapse">
+                            <div class="panel-body">Navigating the maps on a desktop or laptop can be done using either a mouse or trackpad. Using either a mouse or trackpad, the maps can be moved around by using a click and drag in the appropriate direction. Zooming in and out on the maps using a mouse is done simply by scrolling the mouse wheel, whereas this task can be done on a trackpad by utilizing the trackpads pinch functionality. In addition to this, zooming can be achieved by clicking the buttons at the bottom right of the screen. Clicking on pins or rooms for further information is done by simply clicking the mouse or tapping the trackpad.</div>
+                          </div>
+                        </div>
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Navigating the Maps on Mobile</a></h4>
+                          </div>
+                          <div id="collapseThree" class="panel-collapse collapse">
+                            <div class="panel-body">Navigating the maps can also easily be achieved using a mobile or tablet device. The maps themselves can be moved by implementing a swipe or drag motion with your finger. Zooming in and out will require a pinching motion in order to enlarge or condense the map size, or simply clicking the button at the bottom left of the screen. Further information about pins or rooms can be found by tapping the screen with your finger.</div>
+                          </div>
+                        </div>
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">Extra Features</a></h4>
+                          </div>
+                          <div id="collapseThree" class="panel-collapse collapse">
+                            <div class="panel-body">Locations of key places in the museum such as Toilets, Lifts, and the Information Desk can be found by clicking the respective buttons on the right hand side of the screen. The current map shown can be changed by selecting a floor using the drop down list at the top right of the screen. A full screen mode is available on desktops and laptops by clicking the ‘enlarge’ button found at the the top right, next to the floor selection list.</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <!-- About Us Drop-down -->
+              <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">About Us<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <div class="yamm-content">
+                      <ul class="media-list">
+                        <li class="media"><a href="#" class="pull-right"><img src="img/UOB.png" alt="64x64" class="media-object"></a>
+                          <div class="media-body">
+                            <h4 class="media-heading">Our Project</h4>This website was produced for the Bristol Museum & Art Gallery as part of an assessed software engineering project for second year computer scientists attending the University of Bristol. Working in collaboration with staff at the museum, the team of 6 students aimed to create a successful search tool designed to show the user the specific locations of items that can be found in the Bristol Museum & Art Gallery.
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+          </ul>
+        </div>
+      </div>
     </div>
 
  <div id="wrapper"> 
@@ -48,7 +107,10 @@
     </div>
   </div> 
 
+
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/js/bootstrap.min.js"></script>
@@ -61,7 +123,7 @@
     <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
     <script type="text/javascript" src="js/smoothscroll.js"></script>
     <script type="text/javascript" src="mapplic/mapplic.js"></script>
-
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css"></script>
     <script type="text/javascript">
 
     var vheight = document.getElementById('wrapper').clientHeight;
@@ -83,6 +145,15 @@
         //$(".mapplic-search-form").toggle();
         //$("#mapplic-containerMOBILE").toggleClass("toggled");
     });
+    
+    </script>
+    <script>
+       $(function() {
+        window.prettyPrint && prettyPrint()
+        $(document).on('click', '.yamm .dropdown-menu', function(e) {
+          e.stopPropagation()
+        })
+      })
     </script>
   </body>
 </html>
