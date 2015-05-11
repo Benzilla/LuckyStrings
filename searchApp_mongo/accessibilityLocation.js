@@ -18,9 +18,9 @@ roomLocations["toilet1"] = new Array(0.3975,0.4800,0);
 roomLocations["toilet2"] = new Array(0.5750,0.4300,0);
 roomLocations["toilet3"] = new Array(0.4050,0.4300,0);
 roomLocations["information0"] = new Array(0.5715,0.6120,0);
-roomLocations["lifts0"] = new Array(0.7175,0.4600,0);
-roomLocations["lifts1"]= new Array(0.7188,0.4450,1);
-roomLocations["lifts2"]= new Array(0.7075,0.6089,1);
+roomLocations["lifts0"] = new Array(0.7675,0.4600,0);
+roomLocations["lifts1"]= new Array(0.7388,0.4350,1);
+roomLocations["lifts2"]= new Array(0.7275,0.5989,1);
 roomLocations["lifts3"] = new Array(0.7388,0.5817,2);
 roomLocations["lifts4"] = new Array(0.7530,0.4277,2);
 
